@@ -93,7 +93,7 @@ loan_approved_rejected.show_code()
 loan_approved_pd = (
     st.session_state.gc
     .assign(**{'Is approved': lambda x: x['default'].apply(lambda x: 'approved' if x == '1' else 'rejected')})
-    .groupby(['sex', 'purpose', 'Is approved'])[['credit_amount']].count()
+    .groupby(['sex', 'purpose', 'Is approved'], observed = False)[['credit_amount']].count()
     .reset_index()
     .rename({'credit_amount': 'Number of observations', 
              'purpose': 'Purpose',

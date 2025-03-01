@@ -74,7 +74,7 @@ st.subheader('Plot loans per month by gender in Plotly')
 loans_per_month_pd = (
     st.session_state.gc
     .assign(month = lambda x: x['contract_dt'].dt.to_period('M').astype('string'))
-    .groupby(['month', 'sex'])[['credit_amount']].sum()
+    .groupby(['month', 'sex'], observed = False)[['credit_amount']].sum()
     .reset_index()
     .rename({'credit_amount': 'sum_amount_per_month'}, axis = 1)
 )

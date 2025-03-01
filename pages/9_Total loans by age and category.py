@@ -182,7 +182,7 @@ age_purpose_wide.show_code()
 sum_by_age_pd = (
     st.session_state.gc
     .assign(age_category = lambda x: pd.cut(x['age'], bins = [0, 28, 38, 100], labels = ['young', 'middle age', 'elderly']))
-    .groupby(['purpose', 'age_category'])[['credit_amount']].sum()
+    .groupby(['purpose', 'age_category'], observed = False)[['credit_amount']].sum()
     .reset_index()
     .rename({'credit_amount': 'sum_amount'}, axis = 1)
 )

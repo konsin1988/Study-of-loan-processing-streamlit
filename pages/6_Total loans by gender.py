@@ -36,7 +36,7 @@ sum_by_gender.show_code()
 
 sum_by_gender_pd = (
     st.session_state.gc
-    .groupby(['sex'])[['credit_amount']].sum().reset_index()
+    .groupby(['sex'], observed = False)[['credit_amount']].sum().reset_index()
     .rename({'credit_amount': 'sum_amount'}, axis = 1)
 )
 sex_amount = st.session_state.sum_by_gender_result if st.session_state.run_mode else sum_by_gender_pd

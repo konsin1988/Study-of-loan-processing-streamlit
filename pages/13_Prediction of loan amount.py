@@ -26,7 +26,7 @@ st.text('One-hot encoding')
 st.code(r"""
 X_dum = pd.get_dummies(X, columns=['sex', 'purpose'])
 """, 'python')
-X_dum = pd.get_dummies(X, columns=['sex', 'purpose'])
+X_dum = pd.get_dummies(X, columns=['sex', 'purpose'], drop_first=True)
 
 st.text('Split to train and test:')
 st.code(r"""

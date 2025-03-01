@@ -47,7 +47,7 @@ st.text('There are three ways to run the application:')
 st.markdown(r'''
 1. Locally, in docker containers. To start project, run in terminal: `docker compose up -d --build`. Then open http://localhost:8502
 2. Locally, without docker. To start run in terminal: `streamlit run Introduction.py`. You need to have streamlit in your local machine.
-3. In streamlit cloud, 
+3. In streamlit cloud, https://study-of-loan-processing-app.streamlit.app/
 ''')
 
 st.image('https://g.foolcdn.com/image/?url=https%3A//g.foolcdn.com/editorial/images/488167/handful-of-money.jpg&w=2000&op=resize')

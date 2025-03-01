@@ -31,7 +31,7 @@ st.code(r'''
 get_sum_by_category_pd = (
     st.session_state.gc
         .assign(Month = lambda x: x['contract_dt'].dt.to_period('M').astype('string'))
-        .groupby(['Month', 'purpose'])[['credit_amount']].sum()
+        .groupby(['Month', 'purpose'], observed = False)[['credit_amount']].sum()
         .reset_index()
         .rename({'credit_amount': 'sum_amount', 'purpose': 'Purpose'}, axis = 1)
 )
@@ -46,7 +46,7 @@ cat_order = (
 get_sum_by_category_pd = (
     st.session_state.gc
         .assign(Month = lambda x: x['contract_dt'].dt.to_period('M').astype('string'))
-        .groupby(['Month', 'purpose'])[['credit_amount']].sum()
+        .groupby(['Month', 'purpose'], observed = False)[['credit_amount']].sum()
         .reset_index()
         .rename({'credit_amount': 'sum_amount', 'purpose': 'Purpose'}, axis = 1)
 )

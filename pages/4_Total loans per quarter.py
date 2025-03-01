@@ -132,7 +132,7 @@ loans_quarters.show_code()
 df = (
         st.session_state.gc
         .assign(quarter = lambda x: x['contract_dt'].dt.to_period('Q').astype('string'))
-        .groupby(['quarter'])[['credit_amount']].sum()
+        .groupby(['quarter'], observed = False)[['credit_amount']].sum()
         .reset_index()
         .rename({'quarter': "Quarter start date", 'credit_amount': 'Total amount'}, axis = 1)
     )

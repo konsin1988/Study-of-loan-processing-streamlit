@@ -25,7 +25,7 @@ st.code('''
     sum_per_month = (
         gc
             .assign(month = lambda x: x['contract_dt'].dt.to_period('M'))
-            .groupby('month')
+            .groupby(['month'], onserved = False)
             [['credit_amount']].sum()
         )''')
 
