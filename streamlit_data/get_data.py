@@ -116,7 +116,7 @@ def loading_previous_step():
         subprocess.run('cat german_credit.csv | python3 csv_to_click.py | clickhouse-client --host clickhouse-server --user konsin1988 --password konsin1988konsin1988 -q "INSERT INTO german_cr.german_credit FORMAT CSVWithNames"', shell=True)
     except:
         error_col, code_col = st.columns([0.5, 0.5])
-        error_col.error('Docker connection fails. Try:')
+        error_col.error('Docker connection failed. Try:')
         code_col.code('docker compose up -d --build', 'bash')
         return False
     return True
