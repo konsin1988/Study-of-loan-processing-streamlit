@@ -29,6 +29,6 @@ The original dataset contains 1000 entries with 20 categorial/symbolic attribute
 ### How to run?
 1. Locally, in docker containers. To start project, run in terminal: `docker compose up -d --build`. Then open http://localhost:8502
 2. Locally, without docker. To start run in terminal: `streamlit run Introduction.py`. You need to have streamlit in your local machine.
-3. In streamlit cloud, 
+3. In streamlit cloud, https://study-of-loan-processing-app.streamlit.app/ 
 
 ![Alt text](http://full/path/to/img.jpg)
