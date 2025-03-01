@@ -31,4 +31,8 @@ The original dataset contains 1000 entries with 20 categorial/symbolic attribute
 2. Locally, without docker. To start run in terminal: `streamlit run Introduction.py`. You need to have streamlit in your local machine.
 3. In streamlit cloud, https://study-of-loan-processing-app.streamlit.app/ 
 
-![Alt text](http://full/path/to/img.jpg)
+### Source code and contacts
+**Github**: https://github.com/konsin1988/Study-of-loan-processing-streamlit
+**Telegram**: @dmitry_konsin
+
+![Alt text]("https://g.foolcdn.com/image/?url=https%3A//g.foolcdn.com/editorial/images/488167/handful-of-money.jpg&w=2000&op=resize")

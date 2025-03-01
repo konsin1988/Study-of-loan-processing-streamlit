@@ -50,4 +50,9 @@ st.markdown(r'''
 3. In streamlit cloud, https://study-of-loan-processing-app.streamlit.app/
 ''')
 
+st.subheader('Source code and contacts')
+st.markdown('**Github**: https://github.com/konsin1988/Study-of-loan-processing-streamlit')
+st.markdown('**Telegram**: @dmitry_konsin')
+
+
 st.image('https://g.foolcdn.com/image/?url=https%3A//g.foolcdn.com/editorial/images/488167/handful-of-money.jpg&w=2000&op=resize')
