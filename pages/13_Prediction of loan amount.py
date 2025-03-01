@@ -95,8 +95,9 @@ st.code(r'''
 search = GridSearchCV(model, param_grid)
 search.fit(X_train, y_train)
 ''', 'python')
-search = GridSearchCV(model, param_grid)
-search.fit(X_train, y_train)
+with st.spinner('Search params...'):
+    search = GridSearchCV(model, param_grid)
+    search.fit(X_train, y_train)
 
 text_col, output_col = st.columns([0.3, 0.7])
 text_col.text('The best params:')
