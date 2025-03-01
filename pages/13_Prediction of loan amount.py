@@ -1,6 +1,4 @@
 import streamlit as st
-import plotly.express as px
-import catboost as cb
 import pandas as pd
 from catboost import CatBoostRegressor
 from sklearn.model_selection import train_test_split
